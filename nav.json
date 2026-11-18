@@ -10,7 +10,11 @@
             "algorithm-flowchart",
             "troubleshooting",
             "build-pipeline",
-            "swimlane"
+            "swimlane",
+            "flowchart-symbols",
+            "process-chevrons",
+            "quadratic-solver",
+            "prisma-flow-diagram"
           ]
         },
         {
@@ -19,7 +23,11 @@
             "feedback-loop",
             "pid-controller",
             "state-space",
-            "communication-system"
+            "communication-system",
+            "cascade-control",
+            "disturbance-and-noise",
+            "digital-control-loop",
+            "phase-locked-loop"
           ]
         },
         {
@@ -28,7 +36,11 @@
             "simple-tree",
             "probability-tree",
             "binary-search-path",
-            "binary-heap"
+            "binary-heap",
+            "expression-tree",
+            "huffman-tree",
+            "recursion-tree",
+            "minimax-game-tree"
           ]
         },
         {
@@ -40,7 +52,11 @@
             "decision-tree",
             "file-tree",
             "roof-tree",
-            "red-black-tree"
+            "red-black-tree",
+            "taxonomy",
+            "work-breakdown",
+            "cladogram",
+            "x-bar-tree"
           ]
         },
         {
@@ -48,21 +64,24 @@
           "examples": [
             "simple-timeline",
             "project-milestones",
-            "vertical-timeline"
+            "vertical-timeline",
+            "phd-timeline"
           ]
         },
         {
           "id": "pgfgantt",
           "examples": [
             "gantt-chart",
-            "gantt-progress"
+            "gantt-progress",
+            "gantt-dependencies"
           ]
         },
         {
           "id": "mindmap",
           "examples": [
             "concept-map",
-            "thesis-mindmap"
+            "thesis-mindmap",
+            "machine-learning"
           ]
         },
         {
@@ -70,7 +89,53 @@
           "examples": [
             "timeline",
             "timeline-span",
-            "timeline-dense"
+            "timeline-dense",
+            "computing-history"
+          ]
+        },
+        {
+          "id": "drawings",
+          "examples": [
+            "snowman",
+            "smiley-face",
+            "sun",
+            "rain-cloud",
+            "tree",
+            "house",
+            "rocket",
+            "ringed-planet",
+            "lightbulb",
+            "coffee-cup",
+            "gift-box",
+            "open-book",
+            "graduation-cap",
+            "trophy",
+            "cat-face",
+            "flower",
+            "umbrella",
+            "sailboat",
+            "alarm-clock",
+            "rubber-duck"
+          ]
+        },
+        {
+          "id": "symbols",
+          "examples": [
+            "qed-tombstones",
+            "checkmark-and-cross",
+            "checkboxes",
+            "circled-numbers",
+            "circled-letters",
+            "star",
+            "star-rating",
+            "status-dots",
+            "progress-bar",
+            "keyboard-keys",
+            "information-sign",
+            "warning-sign",
+            "battery-levels",
+            "signal-strength",
+            "harvey-balls"
           ]
         }
       ]
@@ -83,8 +148,10 @@
           "examples": [
             "sin-cos",
             "scatter-plot",
+            "training-curves",
             "bar-chart",
             "histogram",
+            "normal-distribution",
             "error-bars",
             "stacked-bars",
             "box-plot",
@@ -96,7 +163,49 @@
             "heat-map",
             "filled-contour",
             "3d-surface",
-            "torus-surface"
+            "torus-surface",
+            "smooth-curve",
+            "line-plot-markers",
+            "inline-table",
+            "horizontal-bar-chart",
+            "bar-error-bars",
+            "linear-regression",
+            "asymptotes",
+            "semilog-plot",
+            "stacked-area",
+            "bubble-chart",
+            "date-axis",
+            "shared-x-axis",
+            "histogram-normal-fit",
+            "empirical-cdf",
+            "normal-cdf",
+            "sampling-distribution",
+            "roc-curve",
+            "logistic-curve",
+            "fourier-series",
+            "stem-plot",
+            "polar-patterns",
+            "phase-portrait",
+            "quiver-plot",
+            "contour-lines",
+            "colormap-colorbar",
+            "mesh-plot"
+          ]
+        },
+        {
+          "id": "charts",
+          "examples": [
+            "pie-chart",
+            "donut-chart",
+            "progress-ring",
+            "gauge",
+            "waffle-chart",
+            "pictogram",
+            "funnel-chart",
+            "waterfall-chart",
+            "slope-chart",
+            "dumbbell-chart",
+            "radar-chart"
           ]
         }
       ]
@@ -111,7 +220,14 @@
             "function-graph",
             "integral-area",
             "riemann-sum",
-            "tangent-secant"
+            "tangent-secant",
+            "area-between-curves",
+            "trapezoidal-rule",
+            "mean-value-theorem",
+            "epsilon-delta",
+            "taylor-polynomials",
+            "slope-field",
+            "volume-of-revolution"
           ]
         },
         {
@@ -122,7 +238,25 @@
             "unit-circle",
             "vector-addition",
             "inscribed-angle",
-            "pythagoras"
+            "pythagoras",
+            "complex-plane",
+            "number-line",
+            "polar-coordinates",
+            "reflection",
+            "translation",
+            "rotation",
+            "similar-triangles",
+            "law-of-cosines",
+            "regular-polygon-apothem",
+            "tangent-radius",
+            "incircle",
+            "circumcircle",
+            "centroid-medians",
+            "angle-bisector-construction",
+            "angles-same-segment",
+            "parabola-focus-directrix",
+            "ellipse-foci",
+            "hyperbola-asymptotes"
           ]
         },
         {
@@ -137,7 +271,13 @@
             "commutative-cube",
             "adjunction",
             "natural-transformation",
-            "snake-lemma"
+            "snake-lemma",
+            "commutative-triangle",
+            "product-universal-property",
+            "first-isomorphism-theorem",
+            "covering-lift",
+            "five-lemma",
+            "chain-map"
           ]
         },
         {
@@ -146,7 +286,10 @@
             "symmetric-difference",
             "set-difference",
             "venn-counts",
-            "euler-diagram"
+            "euler-diagram",
+            "complement",
+            "venn-elements",
+            "de-morgan"
           ]
         },
         {
@@ -155,14 +298,35 @@
             "venn-2",
             "venn-2-union",
             "venn-3",
-            "venn-3-fill"
+            "venn-3-fill",
+            "venn-2-difference",
+            "venn-2-symmetric-difference",
+            "venn-3-counts"
           ]
         },
         {
           "id": "matrices",
           "examples": [
             "block-matrix",
-            "matrix-multiplication"
+            "matrix-multiplication",
+            "matrix-braces",
+            "augmented-matrix",
+            "transpose",
+            "tridiagonal-matrix",
+            "row-echelon-form",
+            "sarrus-rule",
+            "cofactor-expansion"
+          ]
+        },
+        {
+          "id": "combinatorics",
+          "examples": [
+            "pascal-triangle",
+            "lattice-paths",
+            "stars-and-bars",
+            "permutation-cycles",
+            "dyck-path",
+            "hook-lengths"
           ]
         },
         {
@@ -174,7 +338,9 @@
             "snake-identity",
             "braiding",
             "twist",
-            "trace"
+            "trace",
+            "monoid-laws",
+            "frobenius-law"
           ]
         },
         {
@@ -185,14 +351,31 @@
             "braid-vertical-colored",
             "braid-simple",
             "braid-3strand",
-            "braid-4strand"
+            "braid-4strand",
+            "half-twist",
+            "far-commutativity",
+            "braid-closure"
           ]
         },
         {
           "id": "knots",
           "examples": [
             "trefoil",
-            "hopf-link"
+            "hopf-link",
+            "figure-eight",
+            "torus-knot",
+            "borromean-rings",
+            "reidemeister-moves"
+          ]
+        },
+        {
+          "id": "topology",
+          "examples": [
+            "fundamental-polygons",
+            "genus-surfaces",
+            "punctured-plane-loops",
+            "torus-surface",
+            "mobius-strip"
           ]
         },
         {
@@ -200,14 +383,21 @@
           "examples": [
             "nfold-path",
             "nfold-5",
-            "nfold-circle"
+            "nfold-circle",
+            "arrow-dimensions",
+            "modification"
           ]
         },
         {
           "id": "dynkin-diagrams",
           "examples": [
             "dynkin-a2",
-            "dynkin-b2"
+            "dynkin-b2",
+            "classical-series",
+            "exceptional-series",
+            "labeled-roots",
+            "e8-bourbaki",
+            "extended-e8"
           ]
         },
         {
@@ -215,7 +405,9 @@
           "examples": [
             "tensor-matrix",
             "tensor-metric",
-            "tensor-mixed"
+            "tensor-mixed",
+            "cubic-compliance",
+            "piezoelectric-quartz"
           ]
         },
         {
@@ -223,7 +415,9 @@
           "examples": [
             "polyhedron-axes",
             "polyhedron-triangle",
-            "polyhedron-cone"
+            "polyhedron-cone",
+            "tetrahedron",
+            "feasible-region"
           ]
         },
         {
@@ -231,7 +425,20 @@
           "examples": [
             "penrose-simple",
             "penrose-rhomb",
-            "penrose-pentagon"
+            "penrose-pentagon",
+            "kite-and-dart",
+            "sun"
+          ]
+        },
+        {
+          "id": "fractals",
+          "examples": [
+            "koch-snowflake",
+            "sierpinski-triangle",
+            "cantor-set",
+            "dragon-curve",
+            "hilbert-curve",
+            "fractal-plant"
           ]
         }
       ]
@@ -248,7 +455,32 @@
             "shortest-path",
             "bipartite-graph",
             "dependency-dag",
-            "graph-coloring"
+            "graph-coloring",
+            "cycle-and-path",
+            "complete-graph",
+            "bfs-layers",
+            "minimum-spanning-tree",
+            "topological-order",
+            "euler-path",
+            "flow-network",
+            "planar-dual"
+          ]
+        },
+        {
+          "id": "data-structures",
+          "examples": [
+            "array",
+            "linked-list",
+            "stack-and-queue",
+            "hash-table",
+            "adjacency-matrix",
+            "binary-search",
+            "doubly-linked-list",
+            "circular-buffer",
+            "adjacency-list",
+            "trie",
+            "union-find",
+            "skip-list"
           ]
         },
         {
@@ -260,7 +492,13 @@
             "traffic-light",
             "markov-chain",
             "pushdown-automaton",
-            "turing-machine"
+            "turing-machine",
+            "moore-machine",
+            "mealy-machine",
+            "regex-nfa",
+            "thompson-construction",
+            "dfa-minimization",
+            "cellular-automaton"
           ]
         },
         {
@@ -271,7 +509,15 @@
             "rnn-unrolled",
             "cnn-pipeline",
             "attention",
-            "transformer-encoder"
+            "transformer-encoder",
+            "max-pooling",
+            "convolution",
+            "residual-block",
+            "autoencoder",
+            "u-net",
+            "lstm-cell",
+            "gru-cell",
+            "gan"
           ]
         },
         {
@@ -280,7 +526,15 @@
             "architecture-boxes",
             "sequence-diagram",
             "class-diagram",
-            "er-diagram"
+            "er-diagram",
+            "use-case-diagram",
+            "activity-diagram",
+            "state-machine-diagram",
+            "component-diagram",
+            "deployment-diagram",
+            "layered-architecture",
+            "request-lifecycle",
+            "git-branching"
           ]
         },
         {
@@ -289,7 +543,11 @@
             "network-topology",
             "memory-layout",
             "stack-frames",
-            "cpu-pipeline"
+            "cpu-pipeline",
+            "osi-tcp-ip",
+            "tcp-handshake",
+            "load-balancer",
+            "cache-hierarchy"
           ]
         },
         {
@@ -298,7 +556,13 @@
             "karnaugh-map",
             "half-adder",
             "timing-diagram",
-            "sorting-network"
+            "sorting-network",
+            "full-adder",
+            "ripple-carry-adder",
+            "multiplexer",
+            "sr-latch",
+            "d-flip-flop",
+            "seven-segment-display"
           ]
         },
         {
@@ -306,7 +570,8 @@
           "examples": [
             "nn-simple",
             "nn-wide",
-            "nn-deep"
+            "nn-deep",
+            "nn-labeled"
           ]
         }
       ]
@@ -314,6 +579,34 @@
     {
       "title": "Physics",
       "packages": [
+        {
+          "id": "mechanics",
+          "examples": [
+            "free-body-diagram",
+            "inclined-plane",
+            "projectile-motion",
+            "simple-pendulum",
+            "spring-mass",
+            "atwood-machine",
+            "lever",
+            "torque",
+            "circular-motion",
+            "buoyancy",
+            "elastic-collision",
+            "elliptical-orbit"
+          ]
+        },
+        {
+          "id": "waves",
+          "examples": [
+            "sine-wave",
+            "standing-wave",
+            "damped-oscillation",
+            "interference",
+            "doppler-effect",
+            "em-wave"
+          ]
+        },
         {
           "id": "circuitikz",
           "examples": [
@@ -324,7 +617,16 @@
             "transistor-switch",
             "logic-gates",
             "bridge-rectifier",
-            "common-emitter"
+            "common-emitter",
+            "led-resistor",
+            "rl-circuit",
+            "rlc-parallel",
+            "wheatstone-bridge",
+            "non-inverting-amplifier",
+            "integrator",
+            "full-wave-rectifier",
+            "timer-555-astable",
+            "three-phase-source"
           ]
         },
         {
@@ -338,7 +640,11 @@
             "qft",
             "qft-three",
             "deutsch-jozsa",
-            "phase-estimation"
+            "phase-estimation",
+            "superdense-coding",
+            "bit-flip-code",
+            "bernstein-vazirani",
+            "grover-two-qubits"
           ]
         },
         {
@@ -350,7 +656,9 @@
             "zx-spider-fusion",
             "zx-hadamard",
             "zx-bialgebra",
-            "zx-hopf"
+            "zx-hopf",
+            "zx-color-change",
+            "zx-state-copy"
           ]
         },
         {
@@ -378,7 +686,12 @@
             "s-channel",
             "moller-scattering",
             "compton-scattering",
-            "gluon-emission"
+            "gluon-emission",
+            "pair-annihilation",
+            "beta-decay",
+            "electron-self-energy",
+            "vacuum-polarization",
+            "higgs-gluon-fusion"
           ]
         },
         {
@@ -386,15 +699,19 @@
           "examples": [
             "optics-setup",
             "optics-mirror",
-            "optics-two-lenses"
+            "optics-two-lenses",
+            "diverging-lens",
+            "laser-lens-mirror"
           ]
         },
         {
           "id": "tikzorbital",
           "examples": [
+            "orbital-s",
             "orbital-p",
             "orbital-py",
-            "orbital-pz"
+            "orbital-pz",
+            "d-orbitals"
           ]
         }
       ]
@@ -413,7 +730,43 @@
             "aspirin",
             "caffeine",
             "reaction-arrow",
-            "esterification"
+            "esterification",
+            "lewis-structures",
+            "benzene-resonance",
+            "fischer-projection",
+            "peptide-bond"
+          ]
+        },
+        {
+          "id": "energy-diagrams",
+          "examples": [
+            "reaction-profile",
+            "energy-levels",
+            "mo-diagram",
+            "two-step-reaction",
+            "crystal-field-splitting",
+            "band-gaps"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Economics",
+      "packages": [
+        {
+          "id": "economics",
+          "examples": [
+            "supply-demand",
+            "demand-shift",
+            "production-possibilities",
+            "indifference-curves",
+            "cost-curves",
+            "consumer-producer-surplus",
+            "tax-deadweight-loss",
+            "price-ceiling",
+            "monopoly",
+            "lorenz-curve",
+            "aggregate-demand-supply"
           ]
         }
       ]
@@ -429,7 +782,10 @@
             "cross-product",
             "cube",
             "cone",
-            "spherical-sphere"
+            "spherical-sphere",
+            "cylindrical-coordinates",
+            "helix",
+            "plane-and-normal"
           ]
         }
       ]

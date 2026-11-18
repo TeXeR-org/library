@@ -1,0 +1,13 @@
+% Name: LED with a current-limiting resistor
+% Description: A 9 V battery driving an LED through a series resistor sized for 20 mA at a 2 V forward drop.
+% Tags: LED, current-limiting resistor, Ohm's law, DC circuit
+
+\usepackage{circuitikz}
+
+\begin{circuitikz}[american voltages]
+  % R = (V_s - V_F) / I = (9 - 2) / 0.02 = 350 ohms.
+  \draw (0,0) to[battery1, l={$V_s = 9\,\mathrm{V}$}] (0,3) -- (0.6,3)
+    to[R, l_={$R = 350\,\Omega$}, i>^={$I = 20\,\mathrm{mA}$}] (5,3)
+    to[leD*, l_=LED, v^={$V_F = 2\,\mathrm{V}$}] (5,0) -- (0,0);
+  \node at (2.3,1.5) {$R = \dfrac{V_s - V_F}{I}$};
+\end{circuitikz}

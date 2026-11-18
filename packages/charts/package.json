@@ -1,0 +1,12 @@
+{
+  "name": "Charts",
+  "description": "Business and survey charts that pgfplots does not draw well, in plain TikZ: pie, donut, radar, waterfall, funnel, gauge, and more.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "charts",
+    "pie chart",
+    "infographics",
+    "data visualization"
+  ],
+  "custom": true
+}

@@ -1,0 +1,32 @@
+% Name: Cladogram
+% Description: A cladogram of six vertebrates with the leaves aligned and the trait each clade shares marked on its branch.
+% Tags: cladogram, phylogenetic tree, evolution, biology
+
+\usepackage{forest}
+
+\begin{forest}
+  for tree={
+    grow'=0, l sep=15mm, s sep=1mm, font=\small, inner sep=1pt,
+    edge path={\noexpand\path[\forestoption{edge}] (!u.parent anchor) |- (.child anchor)\forestoption{edge label};},
+    edge={thick},
+  },
+  where n children=0{tier=leaves, font=\small\itshape, anchor=west, child anchor=west}{coordinate},
+  % Each trait label sits on the horizontal part of the branch that leads into the clade sharing it
+  trait/.style={edge label={node[at end, above left, font=\scriptsize, text=blue!70!black, inner sep=1.5pt] {#1}}},
+  [
+    [Lamprey]
+    [, trait=jaws
+      [Shark]
+      [, trait=bone
+        [Perch]
+        [, trait=limbs
+          [Frog]
+          [, trait=amnion
+            [Mouse]
+            [, trait=diapsid [Lizard] [Pigeon]]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{forest}

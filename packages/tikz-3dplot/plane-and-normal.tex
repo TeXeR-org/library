@@ -1,0 +1,21 @@
+% Name: Plane and normal vector
+% Description: A plane through the point P₀ with its normal vector n: every vector from P₀ to a point P of the plane is perpendicular to n.
+% Tags: plane, normal vector, dot product, 3D geometry
+
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows.meta}
+
+\tdplotsetmaincoords{65}{120}
+\begin{tikzpicture}[tdplot_main_coords, scale=1.5, >={Stealth}, every node/.style={font=\small}]
+  % The plane through P₀ = (0, 0, 1) spanned by u = (1, -1, 0) and v = (1, 1, -1), both perpendicular to n = (0.5, 0.5, 1)
+  \coordinate (P0) at (0,0,1);
+  \fill[blue!12, draw=blue!50!black] (-1.2,1.2,1) -- ++(1.8,1.8,-1.8) -- ++(2.4,-2.4,0) -- ++(-1.8,-1.8,1.8) -- cycle;
+  \draw[->] (0,0,0) -- (2.4,0,0) node[anchor=north east] {$x$};
+  \draw[->] (0,0,0) -- (0,2.4,0) node[anchor=north west] {$y$};
+  \draw[->] (0,0,0) -- (0,0,2.6) node[anchor=south] {$z$};
+  % P = P₀ + 0.6u + 0.6v = (1.2, 0, 0.4)
+  \draw[->, thick, orange!85!black] (P0) -- node[below, sloped, font=\footnotesize] {$\mathbf{r} - \mathbf{r}_0$} (1.2,0,0.4) node[below] {$P$};
+  \draw[->, very thick, red!70!black] (P0) -- ++(0.5,0.5,1) node[above] {$\mathbf{n}$};
+  \fill (P0) circle (1.3pt) node[left] {$P_0$};
+  \node[anchor=west] at (0,2.2,2.2) {$\mathbf{n} \cdot (\mathbf{r} - \mathbf{r}_0) = 0$};
+\end{tikzpicture}

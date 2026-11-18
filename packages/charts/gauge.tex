@@ -1,0 +1,16 @@
+% Name: Gauge
+% Description: A semicircular gauge from 0 to 100 in red, amber, and green bands, with its needle at a score of 72.
+% Tags: gauge, dial, KPI, dashboard
+
+\begin{tikzpicture}[font=\small, band/.style={line width=14pt}]
+  % A value v sits at angle 180 - 1.8v, so 72 is at 50.4 degrees.
+  \draw[band, red!65!black] (180:2.5) arc[start angle=180, end angle=108, radius=2.5];
+  \draw[band, orange!85!black] (108:2.5) arc[start angle=108, end angle=54, radius=2.5];
+  \draw[band, green!45!black] (54:2.5) arc[start angle=54, end angle=0, radius=2.5];
+  \foreach \v in {0,10,...,100} \draw[gray!60!black] (180-1.8*\v:2.0) -- (180-1.8*\v:2.13);
+  \foreach \v in {0,20,...,100} \node[font=\footnotesize] at (180-1.8*\v:1.72) {\v};
+  \draw[line width=2.5pt, line cap=round, gray!20!black] (0,0) -- (50.4:2.3);
+  \fill[gray!20!black] (0,0) circle (4pt);
+  \node[font=\Large\bfseries, below=6pt] at (0,0) {72};
+  \node[below=26pt, gray!30!black] at (0,0) {Customer satisfaction};
+\end{tikzpicture}

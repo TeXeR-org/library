@@ -1,0 +1,17 @@
+% Name: Open book
+% Description: An open book with curved pages, lines of text, and a blue cover behind them.
+% Tags: book, reading, study, illustration
+
+\begin{tikzpicture}[line join=round]
+  % Cover: the page outline, slightly larger and lower
+  \foreach \s in {-1,1}
+    \fill[blue!60!black] (0,-0.05) .. controls (0.7*\s,0.25) and (1.5*\s,0.25) .. (2.38*\s,0.08) -- (2.38*\s,2.65) -- (0,2.55) -- cycle;
+  % Pages
+  \foreach \s in {-1,1} {
+    \filldraw[fill=yellow!6, draw=gray!60!black, thick] (0,0.2) .. controls (0.7*\s,0.5) and (1.5*\s,0.5) .. (2.2*\s,0.3) -- (2.2*\s,2.8) .. controls (1.5*\s,3) and (0.7*\s,3) .. (0,2.7) -- cycle;
+    % Lines of text follow the curve of the page
+    \foreach \d in {0.55,0.8,...,2.1}
+      \draw[gray!55, thick, shorten <=6mm, shorten >=3mm] (0,0.2+\d) .. controls (0.7*\s,0.5+\d) and (1.5*\s,0.5+\d) .. (2.2*\s,0.3+\d);
+  }
+  \draw[gray!60!black, thick] (0,0.2) -- (0,2.7);
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+% Name: Labeled network
+% Description: A fully connected network with three inputs x, four hidden units h, and two outputs ŷ, each node labeled and each layer titled.
+% Tags: neural network, labels, layers, neuralnetwork
+
+\usepackage{neuralnetwork}
+\newcommand{\nnx}[2]{$x_#2$}
+\newcommand{\nnh}[2]{$h_#2$}
+\newcommand{\nny}[2]{$\hat{y}_#2$}
+
+\begin{neuralnetwork}[height=4, nodespacing=9mm, layerspacing=22mm, layertitleheight=8mm]
+  \inputlayer[count=3, bias=false, title=Input, text=\nnx]
+  \hiddenlayer[count=4, bias=false, title=Hidden, text=\nnh] \linklayers
+  \outputlayer[count=2, title=Output, text=\nny] \linklayers
+\end{neuralnetwork}

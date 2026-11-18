@@ -1,0 +1,12 @@
+{
+  "name": "Economics",
+  "description": "The standard diagrams of economics in plain TikZ: supply and demand, surplus, taxes and price controls, monopoly, production possibilities, indifference and cost curves, the Lorenz curve, and AD–AS.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "economics",
+    "microeconomics",
+    "supply and demand",
+    "curves"
+  ],
+  "custom": true
+}

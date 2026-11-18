@@ -1,0 +1,12 @@
+{
+  "name": "Combinatorics",
+  "description": "Counting made visible in plain TikZ: Pascal's triangle, lattice and Dyck paths, stars and bars, permutations, and Young diagrams.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "combinatorics",
+    "counting",
+    "binomial coefficients",
+    "discrete mathematics"
+  ],
+  "custom": true
+}

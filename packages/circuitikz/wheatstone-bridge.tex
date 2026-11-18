@@ -1,0 +1,14 @@
+% Name: Wheatstone bridge
+% Description: Four resistors in a diamond with a galvanometer across the middle, which reads zero when R₁/R₂ = R₃/Rₓ.
+% Tags: Wheatstone bridge, resistance measurement, galvanometer, bridge circuit
+
+\usepackage{circuitikz}
+
+\begin{circuitikz}[circuitikz/label/align=straight]
+  \draw (0,0) coordinate (A) to[R, l=$R_1$, *-*] (2.5,2.5) coordinate (B)
+    to[R, l=$R_2$, -*] (5,0) coordinate (C);
+  \draw (A) to[R, l_=$R_3$, -*] (2.5,-2.5) coordinate (D)
+    to[R, l_=$R_x$] (C);
+  \draw (B) to[rmeterwa, t=G] (D);
+  \draw (A) -- (-1,0) -- (-1,-3.6) to[battery1, l_=$V$] (6,-3.6) -- (6,0) -- (C);
+\end{circuitikz}

@@ -1,0 +1,18 @@
+% Name: Funnel chart
+% Description: A sales funnel from visitors to paying customers, each stage with its count and, on the right, the share of the stage above that it keeps.
+% Tags: funnel chart, conversion, sales, stages
+
+\begin{tikzpicture}[font=\small]
+  % Stage i is a trapezoid from width 8 - 1.6i at the top to 6.4 - 1.6i at the bottom; conversions are 4200/10000, 1800/4200, and 620/1800.
+  \foreach \name/\n/\c [count=\i from 0] in {Visitors/10{,}000/blue!60!black, Sign-ups/4{,}200/blue!60!black!82!white, Free trials/1{,}800/blue!60!black!66!white, Customers/620/blue!60!black!52!white} {
+    \pgfmathsetmacro\top{4 - 0.8*\i}
+    \pgfmathsetmacro\bot{3.2 - 0.8*\i}
+    \fill[\c] (-\top,-1.1*\i) -- (\top,-1.1*\i) -- (\bot,-1.1*\i-1) -- (-\bot,-1.1*\i-1) -- cycle;
+    \node[white, align=center, font=\small\bfseries] at (0,-1.1*\i-0.5) {\name\\[-1pt]\normalfont\n};
+  }
+  \foreach \r [count=\i] in {42.0, 42.9, 34.4} {
+    \draw[-stealth, gray] (4.6-0.8*\i+0.8,-1.1*\i+0.6) to[bend left=40] (4.6-0.8*\i,-1.1*\i-0.4);
+    \node[right, gray!30!black] at (4.85-0.8*\i+0.6,-1.1*\i+0.1) {\r\%};
+  }
+  \node[gray!30!black, align=center] at (0,-5) {Overall conversion: 6.2\%};
+\end{tikzpicture}

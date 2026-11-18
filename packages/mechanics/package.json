@@ -1,0 +1,12 @@
+{
+  "name": "Mechanics",
+  "description": "Free-body diagrams and the classic setups of mechanics in plain TikZ: slopes, pulleys, springs, pendulums, and projectiles.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "mechanics",
+    "forces",
+    "free-body diagrams",
+    "physics"
+  ],
+  "custom": true
+}

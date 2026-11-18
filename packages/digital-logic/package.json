@@ -1,6 +1,6 @@
 {
   "name": "Digital logic",
-  "description": "Karnaugh maps, logic gates, timing diagrams, and sorting networks.",
+  "description": "Logic circuits and their timing: gates, adders, multiplexers, latches and flip-flops, Karnaugh maps, timing diagrams, sorting networks, and a seven-segment display.",
   "ctanUrl": "https://ctan.org/pkg/pgf",
   "tags": [
     "digital logic",

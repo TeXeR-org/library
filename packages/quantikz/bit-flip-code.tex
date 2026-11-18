@@ -1,0 +1,13 @@
+% Name: Three-qubit bit-flip code
+% Description: A qubit encoded into three with two CNOTs, a possible bit flip on any of them, and two ancillas that measure the parities q₁⊕q₂ and q₂⊕q₃ to find which one flipped.
+% Tags: quantum error correction, bit-flip code, syndrome, ancilla
+
+\usepackage{quantikz}
+
+\begin{quantikz}
+  \lstick{$\alpha|0\rangle + \beta|1\rangle$} & \ctrl{1} & \ctrl{2} & \gate[3, style={fill=red!10}]{\text{error}} & \ctrl{3} & & & & & \\
+  \lstick{$|0\rangle$} & \targ{} & & & & \ctrl{2} & \ctrl{3} & & & \\
+  \lstick{$|0\rangle$} & & \targ{} & & & & & \ctrl{2} & & \\
+  \lstick{$|0\rangle$} & & & & \targ{} & \targ{} & & & \meter{} & \setwiretype{c}\rstick{$s_1$} \\
+  \lstick{$|0\rangle$} & & & & & & \targ{} & \targ{} & \meter{} & \setwiretype{c}\rstick{$s_2$}
+\end{quantikz}

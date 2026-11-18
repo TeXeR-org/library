@@ -1,0 +1,12 @@
+% Name: Piezoelectric matrix of quartz
+% Description: The 3×6 piezoelectric matrix d of a crystal of class 32, such as quartz: d₁₂ = −d₁₁, d₂₅ = −d₁₄, and d₂₆ = −2d₁₁.
+% Tags: piezoelectricity, quartz, crystal class 32, Voigt notation
+
+\usepackage{tensormatrix}
+
+$\begin{tmat}{3}{6}
+  \tmatpv{1}{1} \tmatpn{1}{2} \tmatpv{1}{4}
+  \tmatpn{2}{5} \tmatpdn{2}{6}
+  \tmatlink{1 1}{1 2} \tmatlink{1 2}{2 6}
+  \tmatlink{1 4}{2 5}
+\end{tmat}$

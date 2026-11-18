@@ -1,0 +1,9 @@
+% Name: Warning sign
+% Description: A yellow triangle with an exclamation mark, sized in em so it sits inline in a sentence; scale it up for a slide.
+% Tags: warning, caution, sign, inline
+
+\tikz[baseline=0pt, x=1em, y=1em, line join=round] {
+  \filldraw[fill=yellow!85!orange, draw=black, line width=0.07em, rounded corners=0.1em] (0,0) -- (1.1,0) -- (0.55,0.95) -- cycle;
+  \fill (0.5,0.3) -- (0.6,0.3) -- (0.62,0.72) -- (0.48,0.72) -- cycle;
+  \fill (0.55,0.17) circle (0.06);
+} \textbf{Warning:} back up your files before you update.

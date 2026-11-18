@@ -1,6 +1,6 @@
 {
   "name": "Functions and calculus",
-  "description": "Graphs of functions on coordinate axes, areas under curves, Riemann sums, and tangent lines, in plain TikZ.",
+  "description": "Functions and calculus in plain TikZ: graphs, areas under and between curves, Riemann and trapezoid sums, tangents, limits, Taylor polynomials, slope fields, and solids of revolution.",
   "ctanUrl": "https://ctan.org/pkg/pgf",
   "tags": [
     "calculus",

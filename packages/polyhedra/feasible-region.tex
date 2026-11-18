@@ -1,0 +1,16 @@
+% Name: Feasible region of a linear program
+% Description: The polygon cut out by x ≥ 0, y ≥ 0, x + y ≤ 4, and x + 3y ≤ 6, with its four vertices marked.
+% Tags: linear programming, feasible region, polygon, optimization
+
+\usepackage{polyhedra}
+
+\begin{polyhedron}{dim=2}
+  \axes{x={0,5.2}, y={0,3}, xlabel={$x$}, ylabel={$y$}}
+  % x + y = 4 meets x + 3y = 6 at (3,1)
+  \polygon{points={(0,0),(4,0),(3,1),(0,2)}, color=blue!60!black, opacity=0.2, boundary=false}
+  \edge{points={(0,0),(4,0),(3,1),(0,2),(0,0)}, color=blue!60!black}
+  \vertex{point={0,0}, text={$(0,0)$}, anchora=north east, anchorb=below left}
+  \vertex{point={4,0}, text={$(4,0)$}, anchora=north, anchorb=below}
+  \vertex{point={3,1}, text={$(3,1)$}, anchora=south west, anchorb=above right}
+  \vertex{point={0,2}, text={$(0,2)$}, anchora=east, anchorb=left}
+\end{polyhedron}

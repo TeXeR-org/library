@@ -1,0 +1,7 @@
+% Name: QED tombstones
+% Description: Filled and open end-of-proof squares as inline one-liners that sit on the baseline; either works as amsthm's \qedsymbol.
+% Tags: QED, tombstone, end of proof, Halmos
+
+% With amsthm: \renewcommand{\qedsymbol}{\tikz[baseline=0pt] \fill (0,0) rectangle (0.6em,0.6em);}
+Hence $n^2$ is even. \tikz[baseline=0pt] \fill (0,0) rectangle (0.6em,0.6em); \qquad
+Hence $n$ is odd. \tikz[baseline=0pt] \draw[line width=0.05em] (0.025em,0.025em) rectangle (0.575em,0.575em);

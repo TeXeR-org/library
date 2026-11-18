@@ -1,0 +1,12 @@
+{
+  "name": "Symbols",
+  "description": "Small symbols drawn with TikZ for papers and slides, most of them one-liners that sit inline in text: tombstones, checkmarks, stars, circled numbers, keys, signs, and status icons.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "symbols",
+    "icons",
+    "inline",
+    "typography"
+  ],
+  "custom": true
+}

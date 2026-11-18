@@ -1,0 +1,19 @@
+% Name: Three sets with counts
+% Description: Forty students sorted by which of math, physics, and chemistry they take, with the number in each of the eight regions, including the 9 who take none.
+% Tags: venn, counting, three sets, inclusion-exclusion
+
+\usepackage{venndiagram}
+
+% 8 + 5 + 6 + 4 + 3 + 2 + 3 + 9 = 40 students
+\begin{venndiagram3sets}[labelA=$M$, labelB=$P$, labelC=$C$, labelNotABC={$9$}, radius=1.5cm, overlap=1.1cm]
+  \setpostvennhook{
+    \node at (labelOnlyA) {$8$};
+    \node at (labelOnlyB) {$5$};
+    \node at (labelOnlyC) {$6$};
+    \node at (labelOnlyAB) {$4$};
+    \node at (labelOnlyAC) {$3$};
+    \node at (labelOnlyBC) {$2$};
+    \node at (labelABC) {$3$};
+    \node[below, font=\small] at (current bounding box.south) {$M$: math, \ $P$: physics, \ $C$: chemistry; 40 students in all};
+  }
+\end{venndiagram3sets}

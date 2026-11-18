@@ -1,0 +1,24 @@
+% Name: Gantt chart with dependencies
+% Description: A twelve-week project in two groups, with milestones and arrows linking each task to the one that waits for it.
+% Tags: Gantt chart, dependencies, milestones, project planning
+
+\usepackage{pgfgantt}
+
+\begin{ganttchart}[
+  hgrid, vgrid, x unit=6mm, y unit chart=6mm, y unit title=6mm, title height=1,
+  title label font=\small, bar label font=\small, group label font=\small\bfseries, milestone label font=\small\itshape,
+  bar/.append style={fill=blue!30}, group/.append style={fill=gray!60}, milestone/.append style={fill=orange!85!black},
+  link/.style={-latex, thick, red!60!black},
+]{1}{12}
+  \gantttitle{Weeks}{12} \\
+  \gantttitlelist{1,...,12}{1} \\
+  \ganttgroup{Planning}{1}{4} \\
+  \ganttbar[name=req]{Requirements}{1}{2} \\
+  \ganttbar[name=des]{Design}{3}{4} \\
+  \ganttmilestone[name=ok]{Design approved}{4} \\
+  \ganttgroup{Build}{5}{12} \\
+  \ganttbar[name=imp]{Implementation}{5}{9} \\
+  \ganttbar[name=test]{Testing}{10}{11} \\
+  \ganttmilestone[name=rel]{Release}{12}
+  \ganttlink{req}{des} \ganttlink{des}{ok} \ganttlink{ok}{imp} \ganttlink{imp}{test} \ganttlink{test}{rel}
+\end{ganttchart}

@@ -1,0 +1,21 @@
+% Name: Horizontal bar chart
+% Description: Weekly study hours by activity as horizontal bars, sorted from largest to smallest, with each value at the end of its bar.
+% Tags: bar chart, horizontal bars, ranking
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    xbar, bar width=12pt, xmin=0, xmax=14,
+    width=9cm, height=6cm, enlarge y limits=0.15,
+    symbolic y coords={Group project, Reading, Lab work, Problem sets, Lectures},
+    ytick=data, xlabel={Hours per week},
+    nodes near coords, nodes near coords style={font=\footnotesize},
+    xmajorgrids, grid style={gray!20}, axis y line*=left, axis x line*=bottom,
+  ]
+    \addplot[fill=blue!60!black, draw=none] coordinates {
+      (4,Group project) (6.5,Reading) (8,Lab work) (9,Problem sets) (12,Lectures)
+    };
+  \end{axis}
+\end{tikzpicture}

@@ -1,0 +1,12 @@
+{
+  "name": "Fractals",
+  "description": "Self-similar curves and sets drawn with TikZ's Lindenmayer systems and fractal decorations: the Koch snowflake, the Sierpinski triangle, space-filling curves, and more.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "fractals",
+    "L-systems",
+    "self-similarity",
+    "recursion"
+  ],
+  "custom": true
+}

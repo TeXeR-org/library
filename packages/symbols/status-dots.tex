@@ -1,0 +1,8 @@
+% Name: Status dots
+% Description: Green, amber, and red dots for on track, at risk, and blocked, inline one-liners centered on the height of the lower-case letters.
+% Tags: status, traffic light, dashboard, inline
+
+% Each dot is centered at half the x-height, so it lines up with lower-case text
+\tikz[baseline=-0.5ex] \fill[green!55!black] (0,0) circle (0.35em); On track \qquad
+\tikz[baseline=-0.5ex] \fill[orange!90!black] (0,0) circle (0.35em); At risk \qquad
+\tikz[baseline=-0.5ex] \fill[red!75!black] (0,0) circle (0.35em); Blocked

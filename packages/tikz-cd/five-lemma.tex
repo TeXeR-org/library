@@ -1,0 +1,10 @@
+% Name: Five lemma
+% Description: Two exact rows joined by maps that make every square commute: if the outer four maps are isomorphisms, so is the middle one.
+% Tags: five lemma, exact sequence, homological algebra, isomorphism
+
+\usepackage{tikz-cd}
+
+\begin{tikzcd}[row sep=large]
+  A_1 \arrow[r] \arrow[d, "f_1"', "\cong"] & A_2 \arrow[r] \arrow[d, "f_2"', "\cong"] & A_3 \arrow[r] \arrow[d, "f_3"'] & A_4 \arrow[r] \arrow[d, "f_4"', "\cong"] & A_5 \arrow[d, "f_5"', "\cong"] \\
+  B_1 \arrow[r] & B_2 \arrow[r] & B_3 \arrow[r] & B_4 \arrow[r] & B_5
+\end{tikzcd}

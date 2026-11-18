@@ -1,0 +1,23 @@
+% Name: Time series with dates
+% Description: Weekly visitors to a website over a quarter, plotted against calendar dates read straight from the data with the dateplot library.
+% Tags: time series, dates, dateplot, line plot
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\pgfplotsset{compat=1.18}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    width=10cm, height=5.5cm, date coordinates in=x, date ZERO=2025-01-06,
+    xtick={2025-01-06, 2025-02-03, 2025-03-03, 2025-03-31}, xticklabel={\day/\month},
+    xmin=2025-01-01, xmax=2025-04-04, ymin=0, ymax=5000,
+    xlabel={Week starting (day/month, 2025)}, ylabel={Visitors},
+    ymajorgrids, grid style={gray!20}, scaled y ticks=false,
+  ]
+    \addplot[thick, blue!70!black, mark=*, mark size=1.5pt] coordinates {
+      (2025-01-06,1840) (2025-01-13,1910) (2025-01-20,2050) (2025-01-27,1980) (2025-02-03,2240)
+      (2025-02-10,2410) (2025-02-17,2380) (2025-02-24,2690) (2025-03-03,2870) (2025-03-10,3320)
+      (2025-03-17,3150) (2025-03-24,3580) (2025-03-31,3910)
+    };
+  \end{axis}
+\end{tikzpicture}

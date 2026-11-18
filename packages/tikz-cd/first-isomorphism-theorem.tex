@@ -1,0 +1,10 @@
+% Name: First isomorphism theorem
+% Description: A homomorphism φ factors as the quotient map π onto G/ker φ followed by the injective map φ̄, which is an isomorphism onto the image of φ.
+% Tags: isomorphism theorem, quotient, group homomorphism, algebra
+
+\usepackage{tikz-cd}
+
+\begin{tikzcd}[row sep=large, column sep=large]
+  G \arrow[r, "\varphi"] \arrow[d, two heads, "\pi"'] & H \\
+  G / \ker\varphi \arrow[r, "\bar{\varphi}", "\cong"'] & \operatorname{im}\varphi \arrow[u, hook]
+\end{tikzcd}

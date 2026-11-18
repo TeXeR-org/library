@@ -1,0 +1,14 @@
+% Name: Process chevrons
+% Description: Five stages of a project as arrow-shaped chevrons that point to the next one, a common slide layout.
+% Tags: process, chevrons, stages, slides
+
+\usetikzlibrary{shapes.symbols}
+
+\begin{tikzpicture}[
+  stage/.style={signal, signal to=east, signal from=west, signal pointer angle=120, minimum width=23mm, minimum height=10mm, text=white, font=\small\bfseries},
+]
+  \foreach \label [count=\i] in {Plan, Design, Build, Test, Release} {
+    \pgfmathsetmacro\shade{25*(\i-1)}
+    \node[stage, fill=teal!\shade!blue!75!black] at (\i*2.2,0) {\label};
+  }
+\end{tikzpicture}

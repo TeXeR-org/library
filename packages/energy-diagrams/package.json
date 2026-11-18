@@ -1,0 +1,12 @@
+{
+  "name": "Energy diagrams",
+  "description": "Energy along a reaction and between levels, in plain TikZ: reaction profiles, atomic energy levels, molecular orbitals, crystal field splitting, and band gaps.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "energy",
+    "chemistry",
+    "physical chemistry",
+    "spectroscopy"
+  ],
+  "custom": true
+}

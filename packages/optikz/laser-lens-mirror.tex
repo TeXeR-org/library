@@ -1,0 +1,17 @@
+% Name: Laser, lens, and mirror
+% Description: A laser beam focused by a convex lens and turned through 90° by a mirror at 45°, a common bench setup.
+% Tags: laser, convex lens, mirror, optical setup
+
+\usepackage{optikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{tikzpicture}[every node/.style={font=\small}]
+  \laser at (0,0);
+  \draw[very thick, red!70!black] (0.6,0) -- (5,0);
+  \draw[very thick, red!70!black, -{Stealth}] (5,0) -- (5,2.4);
+  \convexlens[angle=0, width=0.5] at (2.6,0);
+  \mirror[angle=-45] at (5,0);
+  \node[below=6mm] at (0,0) {laser};
+  \node[below=8mm] at (2.6,0) {lens};
+  \node[right=7mm] at (5,0) {mirror};
+\end{tikzpicture}

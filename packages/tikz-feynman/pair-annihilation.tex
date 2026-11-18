@@ -1,0 +1,21 @@
+% Name: Annihilation into two photons
+% Description: An electron and a positron annihilate into two photons, joined by a virtual electron exchanged between the two vertices.
+% Tags: annihilation, photons, QED, positron
+
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (a) at (0,0.9);
+    \vertex (b) at (0,-0.9);
+    \vertex (i1) at (-1.8,1.8) {$e^-$};
+    \vertex (i2) at (-1.8,-1.8) {$e^+$};
+    \vertex (f1) at (1.8,1.8) {$\gamma$};
+    \vertex (f2) at (1.8,-1.8) {$\gamma$};
+    \diagram* {
+      (i1) -- [fermion] (a) -- [fermion] (b) -- [fermion] (i2),
+      (a) -- [photon] (f1),
+      (b) -- [photon] (f2),
+    };
+  \end{feynman}
+\end{tikzpicture}

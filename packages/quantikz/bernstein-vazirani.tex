@@ -1,0 +1,12 @@
+% Name: Bernstein-Vazirani algorithm
+% Description: Three qubits and an ancilla in |−⟩ find the hidden string s = 101 in one query: the oracle is a CNOT from each qubit where s has a 1.
+% Tags: Bernstein-Vazirani, oracle, phase kickback, quantum algorithm
+
+\usepackage{quantikz}
+
+\begin{quantikz}[column sep=0.45cm]
+  \lstick{$|0\rangle$} & \gate{H} & \ctrl{3}\gategroup[4,steps=2,style={dashed, rounded corners, inner xsep=4pt}]{$U_f$, $s = 101$} & & \gate{H} & \meter{} & \setwiretype{c}\rstick{$1$} \\
+  \lstick{$|0\rangle$} & \gate{H} & & & \gate{H} & \meter{} & \setwiretype{c}\rstick{$0$} \\
+  \lstick{$|0\rangle$} & \gate{H} & & \ctrl{1} & \gate{H} & \meter{} & \setwiretype{c}\rstick{$1$} \\
+  \lstick{$|1\rangle$} & \gate{H} & \targ{} & \targ{} & & &
+\end{quantikz}

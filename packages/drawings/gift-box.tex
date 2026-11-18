@@ -1,0 +1,16 @@
+% Name: Gift box
+% Description: A wrapped present with a lid, a gold ribbon, and a bow on top.
+% Tags: gift, present, celebration, illustration
+
+\begin{tikzpicture}[line join=round, thick]
+  % Bow loops, then the knot
+  \foreach \s in {-1,1}
+    \filldraw[fill=yellow!75!orange, draw=orange!65!black] (0,1.95) .. controls (0.25*\s,2.55) and (0.95*\s,2.6) .. (0.85*\s,2.2) .. controls (0.8*\s,1.95) and (0.4*\s,1.95) .. (0,1.95) -- cycle;
+  % Box and lid
+  \filldraw[fill=red!65!black, draw=red!35!black] (-1,0) rectangle (1,1.5);
+  \filldraw[fill=red!70!black, draw=red!35!black] (-1.12,1.5) rectangle (1.12,1.95);
+  % Ribbon
+  \filldraw[fill=yellow!75!orange, draw=orange!65!black] (-0.15,0) rectangle (0.15,1.5);
+  \filldraw[fill=yellow!75!orange, draw=orange!65!black] (-0.15,1.5) rectangle (0.15,1.95);
+  \filldraw[fill=yellow!75!orange, draw=orange!65!black] (0,2.02) ellipse (0.2 and 0.15);
+\end{tikzpicture}

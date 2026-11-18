@@ -1,0 +1,10 @@
+% Name: Smiley face
+% Description: A round yellow face with oval eyes, a wide smile, and rosy cheeks.
+% Tags: smiley, emoji, face, illustration
+
+\begin{tikzpicture}
+  \filldraw[fill=yellow!80!orange, draw=orange!80!black, line width=1.5pt] (0,0) circle (1.5);
+  \fill[brown!40!black] (-0.5,0.4) ellipse (0.14 and 0.26) (0.5,0.4) ellipse (0.14 and 0.26);
+  \fill[red!40, opacity=0.6] (-0.95,-0.15) ellipse (0.25 and 0.14) (0.95,-0.15) ellipse (0.25 and 0.14);
+  \draw[brown!40!black, line width=2.5pt, line cap=round] (-0.75,-0.3) .. controls (-0.4,-0.95) and (0.4,-0.95) .. (0.75,-0.3);
+\end{tikzpicture}

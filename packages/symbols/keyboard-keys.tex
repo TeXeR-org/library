@@ -1,0 +1,10 @@
+% Name: Keyboard keys
+% Description: Keys with rounded corners and a shadow underneath, inline one-liners for shortcuts in manuals and slides.
+% Tags: keyboard, shortcut, key, inline
+
+\usetikzlibrary{shadows}
+
+% Fixed text height and depth give every key the same size, with or without descenders
+Press \tikz[baseline=(k.base)] \node[draw=gray!60!black, fill=gray!5, rounded corners=0.15em, line width=0.04em, font=\sffamily\footnotesize, text height=0.7em, text depth=0.15em, inner xsep=0.3em, inner ysep=0.15em, minimum width=1.5em, general shadow={fill=gray!55, shadow yshift=-0.1em}] (k) {Ctrl};
++ \tikz[baseline=(k.base)] \node[draw=gray!60!black, fill=gray!5, rounded corners=0.15em, line width=0.04em, font=\sffamily\footnotesize, text height=0.7em, text depth=0.15em, inner xsep=0.3em, inner ysep=0.15em, minimum width=1.5em, general shadow={fill=gray!55, shadow yshift=-0.1em}] (k) {C};
+to copy the selection.

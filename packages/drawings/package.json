@@ -1,0 +1,12 @@
+{
+  "name": "Drawings",
+  "description": "Friendly illustrations in plain TikZ for slides, posters, and teaching: a snowman, a house, a rocket, a lightbulb, and more, built from simple shapes.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "drawings",
+    "illustrations",
+    "clip art",
+    "slides"
+  ],
+  "custom": true
+}

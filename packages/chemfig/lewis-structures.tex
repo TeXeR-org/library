@@ -1,0 +1,13 @@
+% Name: Lewis structures
+% Description: Water, ammonia, and carbon dioxide drawn with their bonds and lone pairs, so every atom but hydrogen has a full octet.
+% Tags: Lewis structure, lone pairs, octet rule, chemical bonding
+
+\usepackage{chemfig}
+
+% Each \charge{angle=\:} puts a lone pair on the atom at that angle
+\begin{tabular}{c@{\qquad}c@{\qquad}c}
+  \chemfig{H-[:-37.75]\charge{225=\:,315=\:}{O}-[:37.75]H} &
+  \chemfig{\charge{90=\:}{N}(-[:-90]H)(-[:-150]H)-[:-30]H} &
+  \chemfig{\charge{90=\:,270=\:}{O}=C=\charge{90=\:,270=\:}{O}} \\[4pt]
+  water & ammonia & carbon dioxide
+\end{tabular}

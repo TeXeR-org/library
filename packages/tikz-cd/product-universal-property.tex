@@ -1,0 +1,10 @@
+% Name: Universal property of the product
+% Description: Any two maps f and g out of X factor through the product A × B by a unique map u, with π₁ ∘ u = f and π₂ ∘ u = g.
+% Tags: universal property, product, category theory, projections
+
+\usepackage{tikz-cd}
+
+\begin{tikzcd}[row sep=large, column sep=large]
+  & X \arrow[dl, "f"'] \arrow[d, dashed, "\exists!\,u" description] \arrow[dr, "g"] & \\
+  A & A \times B \arrow[l, "\pi_1"] \arrow[r, "\pi_2"'] & B
+\end{tikzcd}

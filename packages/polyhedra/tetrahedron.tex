@@ -1,0 +1,18 @@
+% Name: Standard simplex in 3D
+% Description: The tetrahedron x, y, z ≥ 0, x + y + z ≤ 3: four vertices, six edges, and its slanted face x + y + z = 3 shaded.
+% Tags: simplex, tetrahedron, 3D, polytope
+
+\usepackage{polyhedra}
+
+\begin{polyhedron}{dim=3, phi=70, theta=115}
+  \axes{x={0,5}, y={0,4.5}, z={0,4.5}, xlabel={$x$}, ylabel={$y$}, zlabel={$z$}}
+  \polygon{points={(3,0,0),(0,3,0),(0,0,3)}, color=blue!60!black, opacity=0.25, boundary=false}
+  \edge{points={(3,0,0),(0,3,0),(0,0,3),(3,0,0)}, color=blue!60!black}
+  \edge{points={(0,0,0),(3,0,0)}, color=blue!60!black}
+  \edge{points={(0,0,0),(0,3,0)}, color=blue!60!black}
+  \edge{points={(0,0,0),(0,0,3)}, color=blue!60!black}
+  \vertex{point={0,0,0}, text={$O$}, anchora=south west, anchorb=above right}
+  \vertex{point={3,0,0}, text={$(3,0,0)$}, anchora=east, anchorb=left}
+  \vertex{point={0,3,0}, text={$(0,3,0)$}, anchora=north, anchorb=below}
+  \vertex{point={0,0,3}, text={$(0,0,3)$}, anchora=west, anchorb=right}
+\end{polyhedron}

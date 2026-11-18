@@ -1,0 +1,19 @@
+% Name: Work breakdown structure
+% Description: A project split into four phases across the top, each with its numbered work packages listed beneath it.
+% Tags: work breakdown structure, WBS, project management, hierarchy
+
+\usepackage[edges]{forest}
+
+\begin{forest}
+  for tree={draw, thick, font=\small, inner sep=3pt, text height=1.6ex, text depth=0.45ex, edge={thick}},
+  where level=0{fill=blue!70!black, text=white, font=\small\bfseries, forked edges, l sep'=7mm, s sep=2mm}{},
+  where level>=1{folder, grow'=0}{},
+  where level=1{fill=blue!15}{},
+  where level=2{fill=white, font=\scriptsize}{},
+  [Website redesign
+    [1 Research [1.1 User interviews] [1.2 Competitor review]]
+    [2 Design [2.1 Wireframes] [2.2 Visual design]]
+    [3 Build [3.1 Front end] [3.2 Content migration]]
+    [4 Launch [4.1 Testing] [4.2 Go live]]
+  ]
+\end{forest}

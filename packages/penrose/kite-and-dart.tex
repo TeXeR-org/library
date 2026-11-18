@@ -1,0 +1,21 @@
+% Name: Kite and dart
+% Description: Penrose's two tiles side by side, with the arcs that must join up in color wherever two tiles meet.
+% Tags: penrose, kite, dart, matching rules
+
+\usetikzlibrary{tilings.penrose}
+
+\begin{tikzpicture}[
+  every tile pic/.style={transform shape},
+  every tile/.style={draw},
+  every circle arc/.style={draw=red!70!black, ultra thick},
+  every long arc/.style={draw=green!50!black, ultra thick},
+  scale=2,
+]
+  % fill each tile first, then draw it again with its arcs on top
+  \pic[kite, every tile/.style={fill=blue!15}];
+  \pic[kite];
+  \pic[dart, every tile/.style={fill=orange!25}, at={(1.8,0)}];
+  \pic[dart, at={(1.8,0)}];
+  \node[below] at (0.5,-0.58) {kite};
+  \node[below] at (2.15,-0.58) {dart};
+\end{tikzpicture}

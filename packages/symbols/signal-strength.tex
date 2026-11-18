@@ -1,0 +1,9 @@
+% Name: Signal strength bars
+% Description: Signal strength icons with one to four bars lit, the rest in light gray, inline at text height.
+% Tags: signal strength, bars, icon, inline
+
+\foreach \n/\w in {1/Weak, 2/Fair, 3/Good, 4/Excellent} {%
+  \tikz[baseline=0pt] \foreach \b in {1,...,4} {
+    \pgfmathsetmacro\c{\b <= \n ? "blue!70!black" : "gray!25"}
+    \fill[\c] (0.3em*\b,0) rectangle ++(0.2em,0.22em*\b);
+  };~\w\qquad}

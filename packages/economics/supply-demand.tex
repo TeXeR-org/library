@@ -1,0 +1,12 @@
+% Name: Supply and demand
+% Description: A falling demand curve and a rising supply curve meeting at the market's equilibrium price and quantity.
+% Tags: supply and demand, equilibrium, market, microeconomics
+
+\begin{tikzpicture}[every node/.style={font=\small}]
+  \draw[->, thick] (0,0) -- (7,0) node[below left] {Quantity};
+  \draw[->, thick] (0,0) -- (0,6) node[above] {Price};
+  \draw[very thick, blue!70!black] (0.8,5.4) -- (6.2,0.8) node[right] {$D$};
+  \draw[very thick, red!70!black] (0.8,0.8) -- (6.2,5.4) node[right] {$S$};
+  \draw[dashed] (0,3.1) node[left] {$P^*$} -| (3.5,0) node[below] {$Q^*$};
+  \fill (3.5,3.1) circle (2pt) node[right=8pt] {Equilibrium};
+\end{tikzpicture}

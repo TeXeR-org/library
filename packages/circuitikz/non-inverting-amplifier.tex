@@ -1,0 +1,14 @@
+% Name: Non-inverting amplifier
+% Description: An op-amp fed at its plus input, with R₁ to ground and R_f in the feedback path, for a gain of 1 + R_f/R₁.
+% Tags: op-amp, amplifier, non-inverting, feedback
+
+\usepackage{circuitikz}
+
+\begin{circuitikz}
+  \draw (0,0) node[left] {$v_{in}$} to[short, o-] ++(1,0)
+    node[op amp, noinv input up, anchor=+] (OA) {};
+  \draw (OA.-) -- ++(0,-1) coordinate (FB) to[R, l=$R_1$] ++(0,-2) node[ground] {};
+  \draw (FB) to[R, l_=$R_f$, *-] (FB -| OA.out) to[short, -*] (OA.out);
+  \draw (OA.out) to[short, -o] ++(1,0) node[right] {$v_{out}$};
+  \node[right] at ($(FB)+(1.4,-1.2)$) {$\dfrac{v_{out}}{v_{in}} = 1 + \dfrac{R_f}{R_1}$};
+\end{circuitikz}

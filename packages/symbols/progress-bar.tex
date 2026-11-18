@@ -1,0 +1,10 @@
+% Name: Progress bar
+% Description: A rounded bar filled to 65 percent, inline in a line of text; the fill is clipped to the bar so its end stays square.
+% Tags: progress bar, status, percent, inline
+
+% The bar is 5em long, so the fill ends at 0.65 x 5em = 3.25em
+Thesis draft \tikz[baseline=0pt] {
+  \fill[gray!20, rounded corners=0.3em] (0,0) rectangle (5em,0.6em);
+  \clip[rounded corners=0.3em] (0,0) rectangle (5em,0.6em);
+  \fill[green!50!black] (0,0) rectangle (3.25em,0.6em);
+} 65\%

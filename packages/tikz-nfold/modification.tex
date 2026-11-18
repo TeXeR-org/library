@@ -1,0 +1,13 @@
+% Name: Two-cells and a three-cell
+% Description: Two parallel 1-cells f and g, two 2-cells α and β between them, and a triple-stroke 3-cell Γ from α to β.
+% Tags: nfold, 3-cell, modification, tikz-cd, 2-category
+
+\usepackage{tikz-cd}
+\usetikzlibrary{nfold}
+
+\begin{tikzcd}[column sep=4cm]
+  A \arrow[r, bend left=50, "f"{name=U}] \arrow[r, bend right=50, "g"'{name=D}] & B
+  \arrow[Rightarrow, nfold, from=U, to=D, bend right=45, shorten=6pt, "\alpha"'{name=L}]
+  \arrow[Rightarrow, nfold, from=U, to=D, bend left=45, shorten=6pt, "\beta"{name=R}]
+  \arrow[Rightarrow, scaling nfold=3, from=L, to=R, shorten=6pt, "\Gamma"]
+\end{tikzcd}

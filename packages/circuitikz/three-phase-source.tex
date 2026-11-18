@@ -1,0 +1,14 @@
+% Name: Three-phase source
+% Description: Three sinusoidal sources joined in a star at the neutral N, each feeding one line, a, b, and c, with voltages 120° apart.
+% Tags: three-phase, star connection, AC power, phasors
+
+\usepackage{circuitikz}
+
+\begin{circuitikz}[circuitikz/label/align=straight]
+  \draw (0,0) to[sV, l=$v_a$, *-o] (90:2.8) node[above] {$a$};
+  \draw (0,0) to[sV, l_=$v_b$, -o] (330:2.8) node[right] {$b$};
+  \draw (0,0) to[sV, l=$v_c$, -o] (210:2.8) node[left] {$c$};
+  \draw (0,0) -- (0,-0.9) node[ground] {};
+  \node[above left=1pt] at (0,0) {$N$};
+  \node[anchor=west, align=left] at (2.4,1.6) {$v_a = V_m\cos\omega t$\\[2pt] $v_b = V_m\cos(\omega t - 120^\circ)$\\[2pt] $v_c = V_m\cos(\omega t + 120^\circ)$};
+\end{circuitikz}

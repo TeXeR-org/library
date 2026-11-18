@@ -1,0 +1,10 @@
+% Name: Chain map
+% Description: A chain map f between chain complexes C and D: each square commutes, f_{n−1} ∘ ∂_n = ∂′_n ∘ f_n.
+% Tags: chain complex, chain map, homological algebra, boundary map
+
+\usepackage{tikz-cd}
+
+\begin{tikzcd}[row sep=large, column sep=large]
+  \cdots \arrow[r] & C_{n+1} \arrow[r, "\partial_{n+1}"] \arrow[d, "f_{n+1}"] & C_n \arrow[r, "\partial_n"] \arrow[d, "f_n"] & C_{n-1} \arrow[r] \arrow[d, "f_{n-1}"] & \cdots \\
+  \cdots \arrow[r] & D_{n+1} \arrow[r, "\partial'_{n+1}"'] & D_n \arrow[r, "\partial'_n"'] & D_{n-1} \arrow[r] & \cdots
+\end{tikzcd}

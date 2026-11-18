@@ -1,0 +1,18 @@
+% Name: Electron self-energy
+% Description: An electron emitting a virtual photon and absorbing it again further along: the one-loop correction to the electron propagator.
+% Tags: self-energy, loop, QED, electron propagator
+
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (i) at (0,0) {$e^-$};
+    \vertex (a) at (1.6,0);
+    \vertex (b) at (3.6,0);
+    \vertex (f) at (5.2,0) {$e^-$};
+    \diagram* {
+      (i) -- [fermion] (a) -- [fermion] (b) -- [fermion] (f),
+      (a) -- [photon, half left, looseness=1.6, edge label=$\gamma$] (b),
+    };
+  \end{feynman}
+\end{tikzpicture}

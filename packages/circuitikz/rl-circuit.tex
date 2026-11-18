@@ -1,0 +1,13 @@
+% Name: RL circuit
+% Description: A battery switched at t = 0 onto a resistor and an inductor in series, so the current rises toward V₀/R with time constant L/R.
+% Tags: RL circuit, inductor, transient, time constant
+
+\usepackage{circuitikz}
+
+\begin{circuitikz}
+  \draw (0,0) to[battery1, l=$V_0$] (0,3)
+    to[cspst, l={$t = 0$}] (3,3)
+    to[R, l=$R$, i>^=$i(t)$] (6,3)
+    to[L, l=$L$] (6,0) -- (0,0);
+  \node at (3,1.4) {$\tau = L/R$};
+\end{circuitikz}

@@ -1,0 +1,12 @@
+{
+  "name": "Waves and oscillations",
+  "description": "Waves and oscillations in plain TikZ: wavelength and amplitude, standing waves, interference, the Doppler effect, electromagnetic waves, and damping.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "waves",
+    "oscillations",
+    "interference",
+    "physics"
+  ],
+  "custom": true
+}

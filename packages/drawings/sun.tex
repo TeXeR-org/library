@@ -1,0 +1,13 @@
+% Name: Sun
+% Description: A yellow sun with twelve rays in alternating lengths around it.
+% Tags: sun, weather, summer, illustration
+
+\begin{tikzpicture}
+  \foreach \a in {0,30,...,330} {
+    \pgfmathsetmacro\len{mod(\a,60)==0 ? 1.75 : 1.5}
+    \draw[orange!90!yellow, line width=4pt, line cap=round] (\a:1.2) -- (\a:\len);
+  }
+  \filldraw[fill=yellow!85!orange, draw=orange!85!black, line width=1.5pt] (0,0) circle (1);
+  % A light highlight in the upper left
+  \fill[yellow!40] (130:0.55) circle (0.18);
+\end{tikzpicture}

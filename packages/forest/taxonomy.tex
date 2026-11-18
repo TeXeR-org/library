@@ -1,0 +1,26 @@
+% Name: Taxonomy of methods
+% Description: A left-to-right taxonomy of graph neural networks, the forked tree that survey papers use to sort the methods they review.
+% Tags: taxonomy, survey, classification, graph neural networks
+
+\usepackage[edges]{forest}
+
+\begin{forest}
+  for tree={
+    grow'=0, forked edges, l sep=5mm, s sep=1.5mm,
+    draw, rounded corners, font=\small, inner sep=2.5pt,
+    anchor=west, child anchor=west, edge={thick, gray!70!black},
+  },
+  where level=0{rotate=90, anchor=north, child anchor=north, fill=blue!70!black, text=white, font=\small\bfseries}{},
+  where level=1{fill=blue!15}{},
+  where level=2{fill=blue!6}{},
+  where n children=0{draw=gray!60, font=\footnotesize}{},
+  [Graph neural networks
+    [Convolutional
+      [Spectral [ChebNet] [GCN]]
+      [Spatial [GraphSAGE] [GAT]]
+    ]
+    [Recurrent [GGNN]]
+    [Autoencoders [GAE] [VGAE]]
+    [Spatial-temporal [STGCN]]
+  ]
+\end{forest}

@@ -1,0 +1,19 @@
+% Name: Helix
+% Description: A helix winding three times round a cylinder of radius 1, rising by one pitch h with each turn, with the parametric equations that trace it.
+% Tags: helix, parametric curve, space curve, 3D
+
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows.meta}
+
+\tdplotsetmaincoords{70}{110}
+\begin{tikzpicture}[tdplot_main_coords, scale=1.5, >={Stealth}, every node/.style={font=\small}]
+  % (cos t, sin t, ht/2π) with h = 0.8, for t from 0 to 6π
+  \draw[gray!50] (1,0,0) arc[start angle=0, end angle=360, radius=1];
+  \draw[gray!50] (0,0,2.4) ++(1,0,0) arc[start angle=0, end angle=360, radius=1];
+  \draw[->] (0,0,0) -- (0,0,3) node[anchor=south] {$z$};
+  \draw[very thick, blue!70!black, domain=0:1080, samples=240, smooth, variable=\t] plot ({cos(\t)}, {sin(\t)}, {0.8*\t/360});
+  % One pitch measured at the right edge, where the helix passes at t = 450° and 810°
+  \foreach \z in {1, 1.8} \draw[thin, orange!70!black] (0,1,\z) -- (0,1.45,\z);
+  \draw[<->, orange!85!black, thick] (0,1.35,1) -- node[right] {$h$} (0,1.35,1.8);
+  \node[anchor=west, align=left] at (0,2.1,1.4) {$x = \cos t$\\$y = \sin t$\\$z = \dfrac{h t}{2\pi}$};
+\end{tikzpicture}

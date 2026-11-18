@@ -1,0 +1,12 @@
+{
+  "name": "Topology",
+  "description": "The pictures of a first topology course in TikZ and pgfplots: fundamental polygons, the Möbius strip and torus, surfaces of each genus, and loops up to homotopy.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "topology",
+    "surfaces",
+    "homotopy",
+    "manifolds"
+  ],
+  "custom": true
+}

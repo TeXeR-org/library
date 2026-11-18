@@ -1,0 +1,15 @@
+% Name: Flower
+% Description: A daisy-like flower with eight pink petals round a yellow center, on a green stem with two leaves.
+% Tags: flower, plant, spring, illustration
+
+\begin{tikzpicture}
+  \draw[green!45!black, line width=2.5pt] (0,0) .. controls (0.15,1.2) and (-0.1,2) .. (0,2.9);
+  \filldraw[fill=green!55!black, draw=green!35!black] (0.05,0.9) .. controls (0.5,1.4) and (1,1.2) .. (1.2,1.05) .. controls (0.8,0.7) and (0.35,0.7) .. (0.05,0.9);
+  \filldraw[fill=green!55!black, draw=green!35!black] (0.02,1.6) .. controls (-0.4,2.05) and (-0.9,1.9) .. (-1.1,1.75) .. controls (-0.7,1.4) and (-0.3,1.4) .. (0.02,1.6);
+  % Petals: eight ellipses, each set out from the center and turned to point outward
+  \foreach \a in {0,45,...,315}
+    \filldraw[fill=pink!60, draw=magenta!50!black, thin, rotate around={\a:(0,3)}] (0.72,3) ellipse (0.52 and 0.24);
+  \filldraw[fill=yellow!80!orange, draw=orange!70!black] (0,3) circle (0.36);
+  \foreach \a in {0,60,...,300} \fill[orange!70!black] (0,3) ++(\a+20:0.18) circle (0.035);
+  \fill[green!15!brown!40] (0,0) ellipse (1 and 0.12);
+\end{tikzpicture}

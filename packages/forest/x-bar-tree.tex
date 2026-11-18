@@ -1,0 +1,28 @@
+% Name: X-bar tree
+% Description: An X-bar parse of "the student will read the paper", with tense heading the clause and bar levels between the heads and their phrases.
+% Tags: X-bar theory, syntax, linguistics, parse tree
+
+\usepackage[linguistics]{forest}
+
+\begin{forest}
+  for tree={font=\small, s sep=4mm},
+  where n children=0{font=\small\itshape}{}
+  [TP
+    [DP
+      [D [the]]
+      [NP [N [student]]]
+    ]
+    [T$'$
+      [T [will]]
+      [VP
+        [V$'$
+          [V [read]]
+          [DP
+            [D [the]]
+            [NP [N [paper]]]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{forest}

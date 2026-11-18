@@ -1,0 +1,19 @@
+% Name: Bar chart with error bars
+% Description: Mean reaction time in four conditions as bars, each with an error bar of one standard deviation.
+% Tags: bar chart, error bars, mean, standard deviation
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    ybar, bar width=22pt, ymin=0, ymax=550, width=9cm, height=6cm,
+    symbolic x coords={Control, Caffeine, Sleep loss, Both},
+    xtick=data, ylabel={Reaction time (ms)}, enlarge x limits=0.2,
+    ymajorgrids, grid style={gray!20},
+  ]
+    \addplot[fill=blue!25, draw=blue!70!black,
+      error bars/.cd, y dir=both, y explicit, error bar style={thick, black}, error mark options={rotate=90, mark size=4pt}]
+      coordinates {(Control,412) +- (0,25) (Caffeine,378) +- (0,22) (Sleep loss,465) +- (0,31) (Both,431) +- (0,28)};
+  \end{axis}
+\end{tikzpicture}

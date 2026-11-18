@@ -1,0 +1,16 @@
+% Name: Op-amp integrator
+% Description: An inverting op-amp with a capacitor in the feedback path, whose output is minus the integral of the input over RC.
+% Tags: op-amp, integrator, capacitor, analog computing
+
+\usepackage{circuitikz}
+
+\begin{circuitikz}
+  \draw (0,0) node[op amp] (oa) {};
+  \draw (oa.-) to[short, -*] ++(-0.6,0) coordinate (inv)
+    to[R, l=$R$, -o] ++(-2.4,0) node[left] {$v_{in}$};
+  \draw (inv) -- ++(0,1.6) coordinate (top)
+    to[C, l=$C$] (top -| oa.out) to[short, -*] (oa.out);
+  \draw (oa.+) -- ++(-0.6,0) node[ground] {};
+  \draw (oa.out) to[short, -o] ++(1,0) node[right] {$v_{out}$};
+  \node at (0,-1.9) {$v_{out}(t) = -\dfrac{1}{RC}\displaystyle\int_0^t v_{in}\,dt'$};
+\end{circuitikz}

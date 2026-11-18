@@ -1,0 +1,18 @@
+% Name: Lightbulb
+% Description: A glowing lightbulb with a filament, a screw base, and short rays, the usual picture for an idea.
+% Tags: lightbulb, idea, insight, illustration
+
+\begin{tikzpicture}[line join=round]
+  % Rays around the glass
+  \foreach \a in {0,30,...,180}
+    \draw[orange!90!yellow, line width=2pt, line cap=round] (0,1.6) ++(\a:1.3) -- ++(\a:0.45);
+  % Glass: a circle that narrows into a neck
+  \filldraw[fill=yellow!35, draw=orange!80!black, line width=1.5pt] (-0.45,0.35) .. controls (-0.45,0.8) and (-1,1.05) .. (-1,1.6) arc[start angle=180, end angle=0, radius=1] .. controls (1,1.05) and (0.45,0.8) .. (0.45,0.35) -- cycle;
+  % Filament on two supports
+  \draw[gray!50!black, thick] (-0.15,0.35) -- (-0.25,1.25) (0.15,0.35) -- (0.25,1.25);
+  \draw[orange!85!black, line width=1.2pt] (-0.25,1.25) \foreach \k in {1,...,5} { -- ({-0.25+0.1*\k},{1.25+0.15*mod(\k,2)}) };
+  % Screw base and contact
+  \foreach \y in {0.35,0.15,-0.05}
+    \filldraw[fill=gray!45, draw=gray!30!black, rounded corners=2pt] (-0.47,\y) rectangle (0.47,\y-0.2);
+  \fill[gray!30!black] (-0.25,-0.25) .. controls (-0.2,-0.45) and (0.2,-0.45) .. (0.25,-0.25) -- cycle;
+\end{tikzpicture}

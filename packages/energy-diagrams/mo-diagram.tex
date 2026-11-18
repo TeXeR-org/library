@@ -1,0 +1,24 @@
+% Name: Molecular orbitals of H₂
+% Description: Two hydrogen 1s orbitals combining into a lower bonding and a higher antibonding orbital, with both electrons paired in the bonding one.
+% Tags: molecular orbital, bonding, antibonding, hydrogen molecule
+
+\usetikzlibrary{arrows.meta}
+
+\begin{tikzpicture}[every node/.style={font=\small}, level/.style={very thick}, e/.style={-{Stealth[length=2mm]}, thick}]
+  \draw[->, thick] (-0.6,0) -- (-0.6,4.6) node[above] {Energy};
+  \draw[level] (0,2) -- (1.2,2) node[midway, below=9pt] {1s};
+  \draw[level] (5.2,2) -- (6.4,2) node[midway, below=9pt] {1s};
+  \draw[level, blue!70!black] (2.6,0.8) -- (3.8,0.8) node[midway, below=9pt] {$\sigma_{1s}$};
+  \draw[level, red!70!black] (2.6,3.4) -- (3.8,3.4) node[midway, above=2pt] {$\sigma^*_{1s}$};
+  \foreach \a/\b in {1.2/2.6, 5.2/3.8} {
+    \draw[dashed, gray] (\a,2) -- (\b,0.8);
+    \draw[dashed, gray] (\a,2) -- (\b,3.4);
+  }
+  \draw[e] (0.6,1.75) -- (0.6,2.3);
+  \draw[e] (5.8,1.75) -- (5.8,2.3);
+  \draw[e] (3.05,0.55) -- (3.05,1.1);
+  \draw[e] (3.35,1.05) -- (3.35,0.5);
+  \node at (0.6,4.2) {H};
+  \node at (3.2,4.2) {H$_2$};
+  \node at (5.8,4.2) {H};
+\end{tikzpicture}

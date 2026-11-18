@@ -1,0 +1,22 @@
+% Name: Polar response patterns
+% Description: Microphone pickup patterns on a polar axis: omnidirectional, cardioid, and figure eight, each the magnitude of a + (1 - a) cos theta.
+% Tags: polar plot, polar axis, microphone, directivity
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\pgfplotsset{compat=1.18}
+
+\begin{tikzpicture}
+  \begin{polaraxis}[
+    width=7.5cm, ymin=0, ymax=1, ytick={0.25,0.5,0.75},
+    yticklabel style={font=\scriptsize}, xtick={0,30,...,330},
+    xticklabel={$\pgfmathprintnumber{\tick}^\circ$},
+    domain=0:360, samples=181, every axis plot/.append style={very thick},
+    legend style={at={(1.08,1)}, anchor=north west, draw=none}, legend cell align=left,
+  ]
+    \addplot[gray!70!black] {1};
+    \addplot[blue!70!black] {0.5 + 0.5*cos(x)};
+    \addplot[orange!85!black] {abs(cos(x))};
+    \legend{Omnidirectional, Cardioid, Figure eight}
+  \end{polaraxis}
+\end{tikzpicture}

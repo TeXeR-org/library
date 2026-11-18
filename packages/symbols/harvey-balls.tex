@@ -1,0 +1,11 @@
+% Name: Harvey balls
+% Description: Harvey balls from empty to full in quarters, the round marks used in comparison tables to rate how well each option meets a criterion.
+% Tags: Harvey balls, rating, comparison table, inline
+
+% \harvey{q} fills q quarters clockwise from twelve o'clock
+\newcommand{\harvey}[1]{\tikz[baseline=-0.6ex]{\draw[gray!40!black, line width=0.06em] (0,0) circle (0.5em); \ifnum#1>0 \fill[gray!40!black] (0,0) -- (90:0.5em) arc[start angle=90, delta angle=-90*#1, radius=0.5em] -- cycle; \fi}}
+
+\begin{tabular}{lccccc}
+  & None & Some & Half & Most & Full \\
+  Rating & \harvey{0} & \harvey{1} & \harvey{2} & \harvey{3} & \harvey{4}
+\end{tabular}

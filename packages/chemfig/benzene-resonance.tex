@@ -1,0 +1,13 @@
+% Name: Benzene resonance
+% Description: The two Kekulé structures of benzene joined by a resonance arrow, and the circle that stands for the hybrid of both.
+% Tags: benzene, resonance, Kekulé structure, aromaticity
+
+\usepackage{chemfig}
+
+\schemestart
+  \chemfig{*6(=-=-=-)}
+  \arrow{<->}
+  \chemfig{*6(-=-=-=)}
+  \arrow(@c2--){0}[,0.4]\quad\text{or}\quad
+  \chemfig{**6(------)}
+\schemestop

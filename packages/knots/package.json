@@ -1,6 +1,6 @@
 {
   "name": "knots",
-  "description": "Knot and link diagrams with the knots TikZ library from spath3: draw the strands, and the library breaks them at the crossings.",
+  "description": "Knot and link diagrams, drawn with the knots TikZ library or with a white gap at each crossing: the trefoil, the figure-eight, torus knots, links, and the Reidemeister moves.",
   "ctanUrl": "https://ctan.org/pkg/spath3",
   "tags": [
     "knots",

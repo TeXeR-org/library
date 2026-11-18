@@ -1,0 +1,25 @@
+% Name: 555 timer, astable
+% Description: A 555 timer wired as an astable oscillator: C charges through R₁ and R₂ and discharges through R₂, so the output is a square wave at about 1.44/((R₁ + 2R₂)C).
+% Tags: 555 timer, oscillator, astable, square wave
+
+\usepackage{circuitikz}
+
+\begin{circuitikz}
+  \ctikzset{muxdemux/inner label font=\small, muxdemux/outer label font=\scriptsize}
+  \node[muxdemux, muxdemux def={Lh=8, NL=4, Rh=8, NR=1, NB=2, NT=2, w=5},
+    muxdemux label={L1=DIS, L3=THR, L4=TRIG, T1=VCC, T2=RST, B1=CV, B2=GND, R1=OUT,
+      LU1=7, LU3=6, LU4=2, TL1=8, TL2=4, BL1=5, BL2=1, RU1=3},
+    draw only left pins={1,3,4}, external pins width=0.4, circuitikz/muxdemuxes/fill=blue!8] (A) at (0,0) {};
+  \node[font=\bfseries] at (-0.3,0.4) {555};
+  \coordinate (top) at ($(A.tpin 1)+(0,1.6)$);
+  \coordinate (gnd) at ($(A.bpin 1)+(0,-2)$);
+  \coordinate (x) at ($(A.lpin 1)+(-1.4,0)$);
+  \draw (A.tpin 1) to[short, -*] (A.tpin 1 |- top) -- ++(0,0.4) node[vcc] {$V_{CC}$};
+  \draw (A.tpin 2) |- (top) -- (x |- top) to[R, l_=$R_1$, -*] (x |- A.lpin 1) -- (A.lpin 1);
+  \draw (x |- A.lpin 1) to[R, l_=$R_2$, -*] (x |- A.lpin 3) -- (A.lpin 3);
+  \draw (x |- A.lpin 3) to[short, -*] (x |- A.lpin 4) -- (A.lpin 4);
+  \draw (x |- A.lpin 4) to[C, l_=$C$] (x |- gnd);
+  \draw (A.bpin 1) to[C, l_=10 nF] (A.bpin 1 |- gnd);
+  \draw (x |- gnd) -- (A.bpin 2 |- gnd) node[ground] {} -- (A.bpin 2);
+  \draw (A.rpin 1) to[short, -o] ++(1,0) node[right] {$v_{out}$};
+\end{circuitikz}

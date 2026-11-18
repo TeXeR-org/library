@@ -1,0 +1,16 @@
+% Name: Slope chart
+% Description: How the share of trips by each mode of transport changed between 2015 and 2025, one line per mode joining its two values, the rises in green and the fall in red.
+% Tags: slope chart, change, before and after, comparison
+
+\begin{tikzpicture}[font=\small, y=0.1cm]
+  % Each year's four shares add up to 100%: 62 + 18 + 14 + 6 and 51 + 22 + 16 + 11.
+  \draw[gray!50] (0,0) -- (0,68) (5,0) -- (5,68);
+  \node[above, font=\small\bfseries] at (0,68) {2015};
+  \node[above, font=\small\bfseries] at (5,68) {2025};
+  \foreach \name/\a/\b/\c in {Car/62/51/red!65!black, Public transport/18/22/green!45!black, Walking/14/16/green!45!black, Cycling/6/11/green!45!black} {
+    \draw[\c, very thick] (0,\a) -- (5,\b);
+    \fill[\c] (0,\a) circle (2.2pt) (5,\b) circle (2.2pt);
+    \node[left=3pt] at (0,\a) {\name\quad\a\%};
+    \node[right=3pt] at (5,\b) {\b\%};
+  }
+\end{tikzpicture}

@@ -1,0 +1,12 @@
+% Name: Star rating
+% Description: Five stars filled to a rating of three and a half, drawn inline with a clip that cuts the fourth star in half.
+% Tags: rating, stars, review, inline
+
+\usetikzlibrary{shapes.geometric}
+
+% Stars sit 1em apart; clip at (rating - 0.5)em, so 3em for a rating of 3.5 and 4.5em for 5
+Overall rating \tikz[baseline=-0.36em, x=1em, y=1em, point/.style={star, star points=5, star point ratio=2.618, minimum size=0.9em, inner sep=0pt}] {
+  \foreach \i in {0,...,4} \node[point, draw=orange!90!black, line width=0.06em] at (\i,0) {};
+  \clip (-0.5,-0.5) rectangle (3,0.5);
+  \foreach \i in {0,...,4} \node[point, fill=orange!90!black, draw=orange!90!black, line width=0.06em] at (\i,0) {};
+} 3.5 out of 5

@@ -1,0 +1,34 @@
+% Name: Recursion tree
+% Description: The recursion tree of T(n) = 2T(n/2) + cn, with each level summing to cn and a total of cn log n + cn.
+% Tags: recursion tree, merge sort, divide and conquer, algorithms
+
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{tikzpicture}[
+  level distance=12mm,
+  level 1/.style={sibling distance=32mm},
+  level 2/.style={sibling distance=16mm},
+  every node/.style={font=\small},
+  edge from parent/.style={draw, thick},
+  sum/.style={anchor=west, gray!40!black},
+]
+  \node {$cn$}
+    child { node {$cn/2$}
+      child { node {$cn/4$} }
+      child { node {$cn/4$} }
+    }
+    child { node {$cn/2$}
+      child { node {$cn/4$} }
+      child { node {$cn/4$} }
+    };
+  \foreach \x in {-2.4,-0.8,0.8,2.4} \node at (\x,-3.4) {$\vdots$};
+  \node at (0,-4.5) {$c \quad c \quad c \quad c \quad \cdots \quad c \quad c \quad c \quad c$};
+  % Each of the log2 n levels above the leaves costs cn; the n leaves cost c each
+  \draw[gray, dashed] (3.4,0.4) -- (3.4,-4.8);
+  \node[sum] at (3.6,0) {$cn$};
+  \node[sum] at (3.6,-1.2) {$cn$};
+  \node[sum] at (3.6,-2.4) {$cn$};
+  \node[sum] at (3.6,-4.5) {$cn$};
+  \draw[decorate, decoration={brace, amplitude=5pt}] (-3.4,-3.8) -- node[left=6pt] {$\log_2 n$ levels} (-3.4,0.2);
+  \node at (0,-5.4) {Total: $cn \log_2 n + cn = \Theta(n \log n)$};
+\end{tikzpicture}

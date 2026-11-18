@@ -1,0 +1,19 @@
+% Name: Pictogram
+% Description: Twenty figures, each standing for 5% of commuters, with the seven who cycle to work highlighted to show 35% at a glance.
+% Tags: pictogram, icon chart, infographic, percentage
+
+\begin{tikzpicture}[font=\small,
+    person/.style={fill=#1},
+    person/.default=gray!30]
+  \foreach \i in {0,...,19} {
+    \pgfmathtruncatemacro\col{mod(\i,10)}
+    \pgfmathtruncatemacro\row{\i/10}
+    \ifnum\i<7 \def\c{blue!70!black}\else \def\c{gray!30}\fi
+    \begin{scope}[shift={(0.6*\col, -1.1*\row)}]
+      \fill[\c] (0,0.62) circle (0.11);
+      \fill[\c, rounded corners=2pt] (-0.17,0) rectangle (0.17,0.46);
+    \end{scope}
+  }
+  \node[anchor=west, align=left] at (6.2,-0.25) {\textbf{\textcolor{blue!70!black}{35\%}} of commuters\\cycle to work};
+  \node[anchor=west, font=\footnotesize, gray!40!black] at (-0.25,-1.55) {Each figure is 5\% of commuters.};
+\end{tikzpicture}

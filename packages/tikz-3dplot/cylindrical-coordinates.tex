@@ -1,0 +1,22 @@
+% Name: Cylindrical coordinates
+% Description: A point P located by its cylindrical coordinates: the distance r from the z-axis, the angle θ from the x-axis, and the height z.
+% Tags: cylindrical coordinates, 3D, coordinate systems, tikz-3dplot
+
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows.meta}
+
+\tdplotsetmaincoords{65}{120}
+\begin{tikzpicture}[tdplot_main_coords, scale=1.6, >={Stealth}, every node/.style={font=\small}]
+  % P = (r cos θ, r sin θ, z) with r = 2, θ = 50°, z = 1.5, so (1.286, 1.532, 1.5)
+  \draw[->] (0,0,0) -- (2.6,0,0) node[anchor=north east] {$x$};
+  \draw[->] (0,0,0) -- (0,2.6,0) node[anchor=north west] {$y$};
+  \draw[->] (0,0,0) -- (0,0,2.3) node[anchor=south] {$z$};
+  \draw[thin, gray, dashed] (2,0,0) arc[start angle=0, end angle=90, radius=2];
+  \draw[thick, blue!70!black] (0,0,0) -- node[below, pos=0.6] {$r$} (1.286,1.532,0);
+  \draw[thick, green!50!black] (1.286,1.532,0) -- node[right, pos=0.7] {$z$} (1.286,1.532,1.5);
+  \draw[dashed, gray] (0,0,1.5) -- (1.286,1.532,1.5);
+  \draw[->, orange!85!black, thick] (0.7,0,0) arc[start angle=0, end angle=50, radius=0.7];
+  \node[orange!70!black] at (0.95,0.38,0) {$\theta$};
+  \fill (1.286,1.532,1.5) circle (1.4pt) node[above right] {$P(r, \theta, z)$};
+  \fill (1.286,1.532,0) circle (1pt);
+\end{tikzpicture}

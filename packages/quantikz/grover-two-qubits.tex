@@ -1,0 +1,10 @@
+% Name: Grover search on two qubits
+% Description: One Grover iteration on two qubits: an oracle that flips the sign of |11⟩, then the diffusion step, so the measurement returns 11 with certainty.
+% Tags: Grover's algorithm, quantum search, oracle, amplitude amplification
+
+\usepackage{quantikz}
+
+\begin{quantikz}[column sep=0.6cm]
+  \lstick{$|0\rangle$} & \gate{H} & \ctrl{1}\gategroup[2,steps=1,style={dashed, rounded corners, inner xsep=1pt}]{oracle} & \gate{H}\gategroup[2,steps=5,style={dashed, rounded corners, inner xsep=1pt}]{diffusion} & \gate{X} & \ctrl{1} & \gate{X} & \gate{H} & \meter{} \\
+  \lstick{$|0\rangle$} & \gate{H} & \control{} & \gate{H} & \gate{X} & \control{} & \gate{X} & \gate{H} & \meter{}
+\end{quantikz}

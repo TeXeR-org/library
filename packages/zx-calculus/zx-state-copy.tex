@@ -1,0 +1,16 @@
+% Name: State copy rule
+% Description: The ZX copy rule: a red state with phase 0 plugged into a green spider with two outputs comes out as two copies of the state, up to a scalar.
+% Tags: ZX-calculus, copy rule, spider, state
+
+\usepackage{zx-calculus}
+
+$\begin{ZX}
+  & & \zxN{} \\
+  \zxX{} \rar & \zxZ{} \ar[ru] \ar[rd] & \\
+  & & \zxN{}
+\end{ZX}
+\;=\;
+\begin{ZX}
+  \zxX{} \rar & \zxN{} \\[4mm]
+  \zxX{} \rar & \zxN{}
+\end{ZX}$

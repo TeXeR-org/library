@@ -1,6 +1,6 @@
 {
   "name": "optikz",
-  "description": "Optical components for laser setups: lenses, mirrors, beamsplitters.",
+  "description": "Optical components for laser setups: lasers, lenses, and mirrors.",
   "ctanUrl": "https://ctan.org/pkg/optikz",
   "tags": [
     "optics",

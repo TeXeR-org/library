@@ -1,0 +1,10 @@
+% Name: Two sets, difference
+% Description: The set difference A \ B: the part of A that is not in B, shaded.
+% Tags: venn, set difference, two sets
+
+\usepackage{venndiagram}
+
+\begin{venndiagram2sets}[labelA=$A$, labelB=$B$, shade=blue!25]
+  \fillANotB
+  \setpostvennhook{\node[below] at (current bounding box.south) {$A \setminus B$};}
+\end{venndiagram2sets}

@@ -1,0 +1,12 @@
+{
+  "name": "Data structures",
+  "description": "The data structures of a first algorithms course in plain TikZ: arrays and binary search, linked lists, stacks and queues, ring buffers, hash tables, graph representations, tries, union–find, and skip lists.",
+  "ctanUrl": "https://ctan.org/pkg/pgf",
+  "tags": [
+    "data structures",
+    "algorithms",
+    "computer science",
+    "memory"
+  ],
+  "custom": true
+}

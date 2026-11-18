@@ -1,0 +1,11 @@
+% Name: Two sets, symmetric difference
+% Description: The symmetric difference A △ B: the elements in exactly one of the two sets, shaded.
+% Tags: venn, symmetric difference, exclusive or, two sets
+
+\usepackage{venndiagram}
+
+\begin{venndiagram2sets}[labelA=$A$, labelB=$B$, shade=orange!30]
+  \fillOnlyA
+  \fillOnlyB
+  \setpostvennhook{\node[below] at (current bounding box.south) {$A \mathbin{\triangle} B = (A \setminus B) \cup (B \setminus A)$};}
+\end{venndiagram2sets}

@@ -1,0 +1,10 @@
+% Name: Superdense coding
+% Description: Alice and Bob share a Bell pair; Alice applies X^b and Z^a to her qubit to encode two classical bits, and Bob's CNOT and Hadamard read out a and b.
+% Tags: superdense coding, entanglement, Bell pair, protocol
+
+\usepackage{quantikz}
+
+\begin{quantikz}
+  \lstick{$|0\rangle$} & \gate{H} & \ctrl{1}\slice{shared pair} & \gate{X^b} & \gate{Z^a}\slice{sent to Bob} & \ctrl{1} & \gate{H} & \meter{} & \setwiretype{c}\rstick{$a$} \\
+  \lstick{$|0\rangle$} & & \targ{} & & & \targ{} & & \meter{} & \setwiretype{c}\rstick{$b$}
+\end{quantikz}

@@ -1,0 +1,11 @@
+% Name: Battery levels
+% Description: Battery icons at full, 60%, 30%, and 10% charge, inline at text height, turning amber and then red as they run down.
+% Tags: battery, icon, status, inline
+
+% A body 1.6em wide with a terminal nub; the charge fills a fraction of the inside
+\foreach \f/\c in {1/green!55!black, 0.6/green!55!black, 0.3/orange!90!black, 0.1/red!75!black} {%
+  \tikz[baseline=0pt] {
+    \draw[gray!40!black, line width=0.08em, rounded corners=0.12em] (0,0) rectangle (1.6em,0.75em);
+    \fill[gray!40!black] (1.6em,0.22em) rectangle (1.75em,0.53em);
+    \fill[\c] (0.12em,0.12em) rectangle ({0.12em + \f*1.36em},0.63em);
+  }~\pgfmathparse{int(100*\f)}\pgfmathresult\%\qquad}

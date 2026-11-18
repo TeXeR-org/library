@@ -1,0 +1,11 @@
+% Name: Peptide bond formation
+% Description: Two glycine molecules joined by a condensation reaction into the dipeptide glycylglycine and water, with the new peptide bond in orange.
+% Tags: peptide bond, amino acids, condensation, biochemistry
+
+\usepackage{chemfig}
+
+\begin{tabular}{c}
+  \chemfig{H_2N-CH_2-C(=[1]O)-[7]OH} \quad $+$ \quad \chemfig{H_2N-CH_2-C(=[1]O)-[7]OH} \\[2pt]
+  \tikz\draw[->, thick] (0,0) -- (0,-0.8); \\[2pt]
+  \chemfig{H_2N-CH_2-C(=[1]O)-[7,,,,draw=orange!85!black, line width=1.4pt]N(-[6]H)-CH_2-C(=[1]O)-[7]OH} \quad $+$ \quad \chemfig{H_2O}
+\end{tabular}

@@ -1,0 +1,9 @@
+% Name: Stars
+% Description: A filled and an outlined five-pointed star as inline one-liners whose lower points rest on the baseline.
+% Tags: star, favorite, highlight, inline
+
+\usetikzlibrary{shapes.geometric}
+
+% A regular five-pointed star has outer to inner radius 2.618; baseline -0.36em puts its lower points on the baseline
+Editor's pick \tikz[baseline=-0.36em] \node[star, star points=5, star point ratio=2.618, minimum size=0.9em, inner sep=0pt, fill=orange!90!black] {}; \qquad
+Not yet rated \tikz[baseline=-0.36em] \node[star, star points=5, star point ratio=2.618, minimum size=0.9em, inner sep=0pt, draw=orange!90!black, line width=0.06em] {};

@@ -1,0 +1,20 @@
+% Name: Vacuum polarization
+% Description: A photon briefly splitting into a virtual electron-positron loop and recombining: the one-loop correction to the photon propagator.
+% Tags: vacuum polarization, loop, QED, photon propagator
+
+\usepackage[compat=1.1.0]{tikz-feynman}
+
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex (i) at (0,0) {$\gamma$};
+    \vertex (a) at (1.6,0);
+    \vertex (b) at (3.6,0);
+    \vertex (f) at (5.2,0) {$\gamma$};
+    \diagram* {
+      (i) -- [photon] (a),
+      (a) -- [fermion, half left, edge label=$e^-$] (b),
+      (b) -- [fermion, half left, edge label=$e^+$] (a),
+      (b) -- [photon] (f),
+    };
+  \end{feynman}
+\end{tikzpicture}
